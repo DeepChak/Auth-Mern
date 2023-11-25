@@ -162,7 +162,7 @@ router.post("/sendpasswordlink", async (req, res) => {
                 from: process.env.EMAIL,
                 to: email,
                 subject: "Sending Email For password Reset",
-                text: `This Link Valid For 3 MINUTES https://localhost:3000//forgotpassword/${userfind.id}/${setusertoken.verifytoken}`
+                text: `This Link Valid For 3 MINUTES https://frontend--candid-khapse-5c1360.netlify.app${userfind.id}/${setusertoken.verifytoken}`
             }
 
             transporter.sendMail(mailOptions, (error, info) => {
